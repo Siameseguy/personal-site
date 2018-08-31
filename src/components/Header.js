@@ -1,4 +1,48 @@
-import styled from 'styled-components'
+import styled, {keyframes} from 'styled-components'
+
+const moveInLeft = keyframes `
+  0% {
+      opacity: 0;
+      transform: translateX(-10rem);
+  }
+
+  80% {
+      transform: translateX(1rem);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translate(0);
+  }
+`
+
+const moveInRight = keyframes `
+  0% {
+      opacity: 0;
+      transform: translateX(10rem);
+  }
+
+  80% {
+      transform: translateX(-1rem);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translate(0);
+  }
+`
+
+const moveInBottom = keyframes `
+  0% {
+      opacity: 0;
+      transform: translateY(3rem);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translate(0);
+  }
+`
 
 const Header = styled.header `
   background-image: linear-gradient(
@@ -26,6 +70,7 @@ const Header = styled.header `
 export const Btn = styled.button `
     align-self: start;
     justify-self: start;
+    margin-top: 2rem;
     margin-right: auto;
     margin-left: auto;
     background-color: #c69963;
@@ -39,6 +84,8 @@ export const Btn = styled.button `
     cursor: pointer;
     transition: all .2s;
 
+    animation: ${moveInBottom} 1s ease-out;
+
     &:hover {
         background-color: #B28451;
     }
@@ -50,6 +97,8 @@ export const HeadingOne = styled.h1 `
   font-size: 5.5rem;
   line-height: 1;
   color: #f9f7f6;
+
+  animation: ${moveInLeft} 1s ease-out;
 `
 export const HeadingThree = styled.h3 `
   font-family: 'Josefin Sans', sans-serif;
@@ -57,6 +106,8 @@ export const HeadingThree = styled.h3 `
   font-size: 2.6rem;
   text-transform: uppercase;
   color: #c69963;
+
+  animation: ${moveInRight} 1s ease-out;
 `
 
 export default Header
