@@ -1,7 +1,17 @@
 import React, {Component} from 'react';
 
 import Container from './components/Container'
-import Sidebar, {NavBtn} from './components/Sidebar';
+import Sidebar, {
+  NavBtn,
+  Navigation,
+  NavigationCheckbox,
+  NavigationNav,
+  NavigationButton,
+  NavigationBackground,
+  NavigationList,
+  NavigationLink,
+  NavigationItem
+} from './components/Sidebar';
 import Header, {Btn, HeadingOne, HeadingThree} from './components/Header';
 import Skills from './components/Skills';
 import About from './components/About';
@@ -17,6 +27,23 @@ class App extends Component {
       <Container>
         <Sidebar>
           <NavBtn/>
+          <Navigation>
+            <NavigationCheckbox type="checkbox" id="navi-toggle"/>
+            <NavigationButton for="navi-toggle">MENU</NavigationButton>
+            <NavigationBackground class="navigation__background">&nbsp;</NavigationBackground>
+            <NavigationNav>
+              <NavigationList>
+                <NavigationItem>
+                  <NavigationLink href="#">
+                    <span>01</span>About</NavigationLink>
+                </NavigationItem>
+                <NavigationItem>
+                  <NavigationLink href="#">
+                    <span>02</span>Projects</NavigationLink>
+                </NavigationItem>
+              </NavigationList>
+            </NavigationNav>
+          </Navigation>
         </Sidebar>
         <Header>
           <HeadingOne>Phanousit Syhakhom</HeadingOne>
