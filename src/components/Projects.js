@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const Projects = styled.section`
+const Projects = styled.section `
   grid-column: full-start / full-end;
   margin: 15rem 0;
   display: grid;
@@ -8,6 +8,5 @@ const Projects = styled.section`
   grid-gap: 6rem;
   align-items: start;
 `
-
 
 export default Projects
